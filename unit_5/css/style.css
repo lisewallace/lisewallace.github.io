@@ -6,99 +6,129 @@
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
 	background-color: #BDA990;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 15px; /*1em=16px*/
-	color: #000000;
-	position: relative;
-	/*position: relative;*/
+	font-size: .94em; /*1em=16px*/
+	position: relative; /*question: confused about why I have position: relative here*/
 }
 
 header {
-	padding: 0 px;
+	background-color: #FFED74;
+	border: 1px black solid;
+	width: 1200px;
+	margin: 0 auto;
+    padding: 20px; /*question: confused about whether to use padding or margin here*/
 }
 
 nav {
+	background-color: #E8C66A;
 	margin: auto;
-	padding: 20px 0px;
-	text-align: center;
+	border: 1px black solid;
+}
+
+nav a {
+	font-family: 'Allerta', sans-serif;
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .125em;
+	padding: 1.25em .94em ; /*note: I've used padding to increase the hover space;
+	margin: 0 .63em; /*note: I've used margins to seperate each link outside of the hover space*/
+	text-decoration: none;
+/*	width: question: not sure about the width for this selector?*/
+	float: right;
+}
+
+nav a:hover {
+	color: #55868b;
+	opacity: 0.5;
 }
 
 main {
-	padding: 0px;
-	background-color: #BDA990;
-	text-align: center;
-/*	margin: need to decide*/
+	width: 1200px;
+	margin: 20px auto;
 }
 
 section {
-	padding: 0px;
-	margin: 40px 0;
+/*	background: url(../images/ubimage01.jpg) no-repeat center center scroll; */
+	margin: 20px 0; /*question: confused about whether to use padding or margin here*/
 	text-align: center;
+	padding
+}
+
+article {
+	background-color: #E89C6C;
+	text-align: center;
+	display: block;
+	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
+	border: 1px black solid;
+    padding: 1.4em 0; /*note: padding is to ensure content isn't on the edge;*/
 }
 
 footer {
+	background-color: #FF957E;
 	margin: auto;
-	padding-bottom: 20px;
+	border: 1px black solid;
+	padding: 20px;
+	width: 1200px;
+}
+
+footer a {
+	font-family: 'Allerta', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600px;
+	letter-spacing: .125em;
+	padding: 1.25em .94em ;
+	margin: 0 .63em;
+	text-decoration: none;
+	float: right;
+}
+
+h1, h2, h3, h4 {
+	color: #640906;
+	letter-spacing: normal;
+	line-height: 1.4em;
 	text-align: center;
 }
 
 h1 {
  	font-family: Montserrat, sans-serif;
- 	font-size: 60px;
+ 	font-size: 3.75em;
  	font-style: normal;
  	font-weight: bold;
- 	letter-spacing: normal;
- 	line-height: 80px;
  	text-transform: uppercase;
-	text-align: center;
-	color: #640906;
-	margin: 20px 100px;
 }
 
 h2 {
 	font-family: 'Sorts Mill Goudy', Georgia, serif;
-  	font-size: 30px;
+  	font-size: 1.875em;
   	font-style: italic;
   	font-weight: 600;
-  	color: #640906;
-  	letter-spacing: normal;
-  	line-height: 0px;
-  	padding-bottom: 15px;
 }
 
 h3 {
 	font-family: 'Sorts Mill Goudy', Georgia, serif;
-  	font-size: 25px;
+  	font-size: 1.56em;
   	font-style: italic;
-  	color: #640906;
   	font-weight: bold;
-  	letter-spacing: normal;
-  	line-height: 0px;
-  	text-transform: none;
-  	padding-bottom: 20px;
 }
-
-/*hr {
-	border: none;
-	height: 3px;
-	background-colour:;
-	width: ;
-	margin-left: auto;
-    margin-right: auto;
-}*/
 
 p {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1em;
-/*	width: 30em;*/
+	font-size: .94em;
 	line-height: 1.4em;
 	color: #041543;
-	padding: 0 20px;
+/*	padding: question: should I use padding on text?*/
 	text-align: center;
+	display: block;
+	width: 30em;
+	margin: auto; /*note: this centers the selector*/
 }
 
 ul {
@@ -113,68 +143,67 @@ li {
     text-align: center;
 }
 
-a {
-	text-decoration: none;
-	color: #145c74;
-	font-weight: bold;
-}
-
-img {
-	margin: 0px 20px;
-
-}
-
-footer a {
-	margin-right: 20px;
-	font-size: 12px;
-	padding: 20px 0px;
-}
-
-aside {
+/*aside {
 	font-size: 15px;
 	float: right;
 	padding: 20px;
 	background-color: #BDA990;
 	text-align: right;
+}*/
+
+.clearfix:after {
+	display: block;
+	content: " ";
+	clear: both;
+
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
 }
 
-#hero {
+.article-image {
 	position: relative;
 	display: block;
-	width: 100%;
-	margin: 0px;
+	max-width: 1200px;
+	margin: 0 auto 1.6em auto; /*question: why not just use the padding attribute in the article selector?*/
 }
 
-.banner {
+.column-left {
+	float: left;
+	width: 600px;
+	background-color: #FFE2B8;
+	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
+	border: 1px black solid;
+    padding: 1.4em 0; /*note: padding is to ensure content isn't on the edge;*/
+}
+
+.columnleft-image {
 	position: relative;
 	display: block;
-	width: 100%;
-	margin: 30px 0;
+	max-width: 500px;
+	margin: 0 auto 1.6em auto;
+}
+
+.column-right {
+	float:right;
+	width: 600px;
+	background-color: #FFE2B8;
+	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
+	border: 1px black solid;
+    padding: 1.4em 0; /*note: padding is to ensure content isn't on the edge;*/
+}
+
+#wrapper {
+	width: 1300px;
+	margin-left: auto;
+	margin-right: auto; 
 }
 
 
-.info {
-	text-align: center;
+.column-left {
+	background-color: #FFE2B8;
 }
 
-.topmenu {
-	font-family: 'Allerta', sans-serif;
-	color:#fff;
-	text-transform: uppercase;
-	font-weight: 600;
-	letter-spacing: 2px;
-	padding:20px;
-}
-
-.footer {
-	font-family: 'Allerta', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: 600px;
-	letter-spacing: 2px;
-	padding: 20px;
-}
 
 #mainimage {
 	width: 100%;

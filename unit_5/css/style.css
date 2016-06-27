@@ -90,10 +90,10 @@ footer a {
 	float: right;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4 { /*question: should I use this instead of padding/margins?*/
 	color: #640906;
 	letter-spacing: normal;
-	line-height: 1.4em;
+	line-height: 1.4em; 
 	text-align: center;
 }
 
@@ -199,15 +199,4 @@ li {
 	margin-right: auto; 
 }
 
-
-.column-left {
-	background-color: #FFE2B8;
-}
-
-
-#mainimage {
-	width: 100%;
-	padding-bottom: 10px;
-	height: 50%;
-}
 

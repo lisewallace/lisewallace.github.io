@@ -9,7 +9,6 @@
 	box-sizing: border-box;
 }
 
-
 body {
 	background-color: #BDA990;
 	font-family: 'Open Sans', sans-serif;
@@ -220,6 +219,8 @@ li {
 	text-decoration: none;
 	float: right;
 }
+
+
 
 
 

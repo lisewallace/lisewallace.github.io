@@ -9,6 +9,7 @@
 	box-sizing: border-box;
 }
 
+
 body {
 	background-color: #BDA990;
 	font-family: 'Open Sans', sans-serif;
@@ -16,42 +17,16 @@ body {
 	position: relative; /*question: confused about why I have position: relative here*/
 }
 
-#site-header { /*note: use site to suggest larger area*/
-	background-color: #FFED74;
-	border: 1px black solid;
-	max-width: 1200px; /*note: will be 1200px or smaller*/
-	width: 100%; /*note: will be 100% it's specification*/
-	margin: 0 auto; /*note: margin is exclusive of width, adds onto width*/
-    padding: 20px; /*note: padding is inclusive of width. Use padding for items that are next to each other*/
+section {
+/*	background: url(../images/ubimage01.jpg) no-repeat center center scroll; */
+/*	margin: 20px 0; question: confused about whether to use padding or margin here*/
+	text-align: center;
+	max-width: 1200px;
+	width: 100%;
+	display: block;
+	margin: 20px auto;
 }
 
-#site-nav {
-	background-color: #E8C66A;
-	margin: auto;
-	border: 1px black solid;
-}
-
-.nav-link {
-	font-family: 'Allerta', sans-serif;
-	color:#fff;
-	text-transform: uppercase;
-	font-weight: 600;
-	letter-spacing: .125em;
-	padding: 1.25em .94em ; /*note: I've used padding to increase the hover space;
-	margin: 0 .63em; /*note: I've used margins to seperate each link outside of the hover space*/
-	text-decoration: none;
-/*	width: question: not sure about the width for this selector?*/
-	float: right;
-}
-
-.nav-link:hover {
-	color: #55868b;
-	opacity: 0.8;
-}
-
-/*.nav-link:visited {
-	color: #fff; question: using this causes the hover not to work - why?
-}*/
 
 main {
 	max-width: 1200px;
@@ -59,41 +34,6 @@ main {
 	margin: 20px auto;
 }
 
-section {
-/*	background: url(../images/ubimage01.jpg) no-repeat center center scroll; */
-	margin: 20px 0; /*question: confused about whether to use padding or margin here*/
-	text-align: center;
-}
-
-.article-info {
-	background-color: #E89C6C;
-	text-align: center;
-	display: block;
-	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
-	border: 1px black solid;
-    padding: 1.4em 0; /*note: padding is to ensure content isn't on the edge;*/
-}
-
-#site-footer {
-	background-color: #FF957E;
-	margin: auto;
-	border: 1px black solid;
-	padding: 20px;
-	width: 1200px;
-}
-
-.nav-footer {
-	font-family: 'Allerta', sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: 600px;
-	letter-spacing: .125em;
-	padding: 1.25em .94em ;
-	margin: 0 .63em;
-	text-decoration: none;
-	float: right;
-}
 
 h1, h2, h3, h4 { /*question: should I use this instead of padding/margins?*/
 	color: #640906;
@@ -155,6 +95,52 @@ li {
 	margin-right: auto; 
 }
 
+/*question: why is there a margin added onto the site header?*/
+#site-header { /*note: use site to suggest larger area*/
+	background-color: #FFED74;
+	border: 1px black solid;
+	max-width: 1200px; /*note: will be 1200px or smaller*/
+	width: 100%; /*note: will be 100% it's specification*/
+	margin: 0 auto; /*note: margin is exclusive of width, adds onto width*/
+    padding: 20px; /*note: padding is inclusive of width. Use padding for items that are next to each other*/
+}
+
+#logo {
+	float: left;
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto 1.6em auto; 
+}
+
+#site-nav {
+	background-color: #E8C66A;
+	margin: auto;
+	border: 1px black solid;
+	float: right;
+}
+
+.nav-link {
+	font-family: 'Allerta', sans-serif;
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .125em;
+	padding: 1.25em .94em ; /*note: I've used padding to increase the hover space;
+/*	width: question: not sure about the width for this selector?*/
+	text-decoration: none;
+	margin: 0.63em auto; /*note: I've used margins to seperate each link outside of the hover space*/
+}
+
+.nav-link:hover {
+	color: #55868b;
+	opacity: 0.8;
+}
+
+/*.nav-link:visited {
+	color: #fff; question: using this causes the hover not to work - why?
+}*/
+
 .clearfix:after {
 	display: block;
 	content: " ";
@@ -203,6 +189,36 @@ li {
 
 .column-right > p {
 	width: 80%;
+}
+
+.article-info {
+	background-color: #E89C6C;
+	text-align: center;
+	display: block;
+	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
+	border: 1px black solid;
+    padding: 1.4em 0; /*note: padding is to ensure content isn't on the edge;*/
+}
+
+#site-footer {
+	background-color: #FF957E;
+	margin: auto;
+	border: 1px black solid;
+	padding: 20px;
+	width: 1200px;
+}
+
+.nav-footer {
+	font-family: 'Allerta', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600px;
+	letter-spacing: .125em;
+	padding: 1.25em .94em ;
+	margin: 0 .63em;
+	text-decoration: none;
+	float: right;
 }
 
 

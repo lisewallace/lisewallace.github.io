@@ -1,0 +1,323 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .94em; /*1em=16px*/
+	position: relative;
+}
+
+section {
+/*	question: confused about whether to use padding or margin here*/
+	text-align: center;
+	max-width: 1200px;
+	width: 100%;
+	display: block;
+	margin: 1.3em auto;
+}
+
+main {
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+}
+
+hr {
+	width: 8em;
+	margin: 0.5em auto 1em auto;
+	height: .20em;
+	background-color: #74b7bb;
+	border: none;
+}
+
+h1, h2, h3, h4 { 
+	color: #ba0010;
+	letter-spacing: normal;
+/*	line-height: 1.4em; */
+	text-align: center;
+}
+
+h1 {
+ 	font-family: Montserrat, sans-serif;
+ 	font-size: 3.75em;
+ 	font-style: normal;
+ 	font-weight: bold;
+ 	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'Sorts Mill Goudy', Georgia, serif;
+  	font-size: 1.875em;
+  	font-style: italic;
+  	font-weight: 600;
+}
+
+h3 {
+	font-family: 'Sorts Mill Goudy', Georgia, serif;
+  	font-size: 1.56em;
+  	font-style: italic;
+  	font-weight: bold;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .94em;
+	line-height: 1.4em;
+	color: #041543;
+/*	padding: question: should I use padding on text?*/
+	text-align: center;
+	display: block;
+	width: 30em;
+	margin: auto; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+    line-height: 1.4em;
+	color: #041543;
+    text-align: left;
+    margin: auto;
+}
+
+#wrapper {
+	max-width: 1300px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+.columnleft-home {
+	max-width: 600px;
+	width: 100%;
+	float:left;
+	display: block;
+	position: relative;
+	background:url(../images/home01.jpg) no-repeat center center scroll;
+	background-size: cover;
+	height: 600px;
+}
+
+.columnright-home01{
+	max-width:300px;
+	width:100%;
+	float:right;
+	display: block;
+	position:relative;
+	background:url(../images/home03.jpg) no-repeat center center scroll;
+	background-size: cover;
+	height: 300px;
+}
+
+.columnright-home02{
+	max-width:300px;
+	width:100%;
+	float:right;
+	display: block;
+	position:relative;
+	background:url(../images/home02.jpg) no-repeat center center scroll;
+	background-size: cover;
+	height: 300px;
+}
+
+.columnright-home03 {
+	max-width:600px;
+	width:100%;
+	float: right;
+	display: block;
+	position: relative;
+	background:url(../images/home04.jpg) no-repeat center center scroll;
+	background-size: cover;
+	height: 300px;
+}
+
+.columnleft-home h1, .columnright-home01 h1, .columnright-home02 h1, .columnright-home03 h1 {
+	font-size: 2em;
+	font-color:#ba0010;
+}
+
+#site-header {
+	width: 100%; /*note: will be 100% it's specification*/
+    padding: 1em; /*note: padding is inclusive of width. Use padding for items that are next to each other*/
+    max-width: 1200px;
+    margin: auto;
+}
+
+#logo {
+	float: left;
+	display: block;
+	width: 100%;
+	max-width: 200px;
+/*	margin: 0 auto 1.6em auto; */
+}
+
+#site-nav {
+	margin: auto;
+	float: right;
+}
+
+.nav-link {
+	font-family: 'Allerta', sans-serif;
+	color:#baac88;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .125em;
+	padding: 1.25em .94em; 
+	text-decoration: none;
+	margin: 0.63em auto; 
+}
+
+.nav-link:hover {
+	color: #55868b;
+	opacity: 0.8;
+}
+
+/*.nav-link:visited {
+	color: #fff; question: using this causes the hover not to work - why?
+}*/
+
+.clearfix:after {
+	display: block;
+	content: " ";
+	clear: both;
+
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
+}
+
+
+#about {
+	background:url(../images/aboutmazz01.jpg) no-repeat center center scroll;
+	background-size: cover;
+	display: block;
+	height: 34.345em;
+	max-width: 1200px;
+}
+
+.article-info {
+	background: #fff;
+	display: block;
+	opacity: 0.75;
+	width: 32em;
+	padding: 1.6em;
+	margin: auto;
+}
+
+.article-block {
+	text-align: center;
+	display: block;
+	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
+    padding: 1.4em 0; 
+}
+
+.article-block img {
+	position: relative;
+	display: block;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto 1.6em auto; /*question: why not just use the padding attribute in the article selector?*/
+}
+
+.column {
+	width: 100%;
+}
+
+.columnleft {
+	float: left;
+	width: 50%;
+	display: block;
+	margin: 1.4em auto;
+	padding: 1.4em auto;
+}
+
+.columnright {
+	float: right;
+	display: block;
+	width: 50%;
+	margin: 1.4em auto;
+	padding: 1.4em auto;
+}
+
+.columnleft-beardspiration {
+	float: left;
+	width: 26%;
+	margin: 1.4em 0; 
+    padding: 1.4em 0; 
+}
+
+.columnleft-beardspiration img {
+	position: relative;
+	display: block;
+	max-width: 400px;
+	width: 100%;
+	margin: auto;
+}
+
+.columnright-beardspiration {
+	float:right;
+	width: 20%;
+	margin: 1.4em 0; 
+    padding: 1.4em 0; 
+	height: 0;
+	padding-bottom: 31%;
+	position: relative;
+}
+
+.columnright-beardspiration p {
+	width: 100%;
+	padding: 10px;
+}
+
+.vertical-beardspiration {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+	width: 100%;
+	left: 0%;
+}
+
+#appointment {
+	background:url(../images/ubimage03.jpg) no-repeat center center scroll;
+	background-size: cover;
+	display: block;
+	height: 34.345em;
+	max-width: 1200px; 
+}
+
+#site-footer {
+	width: 100%; 
+    padding: 1em; 
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-footer {
+	font-family: 'Allerta', sans-serif;
+	color: #baac88;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	font-weight: 600px;
+	letter-spacing: .125em;
+	padding: 1.25em .94em ;
+	margin: auto;
+	text-decoration: none;
+	display: block;
+	float: right;
+}
+
+
+
+

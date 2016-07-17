@@ -29,6 +29,7 @@ main {
 	width: 100%;
 	margin: auto;
 }
+/*body#homepage main { max-width: 1000px; }*/
 
 hr {
 	width: 8em;
@@ -41,15 +42,14 @@ hr {
 h1, h2, h3, h4 { 
 	color: #ba0010;
 	letter-spacing: normal;
-/*	line-height: 1.4em; */
 	text-align: center;
 }
 
 h1 {
- 	font-family: Montserrat, sans-serif;
+ 	font-family: 'Montserrat', sans-serif;
  	font-size: 3.75em;
  	font-style: normal;
- 	font-weight: bold;
+ 	font-weight: 700;
  	text-transform: uppercase;
 }
 
@@ -72,7 +72,6 @@ p {
 	font-size: .94em;
 	line-height: 1.4em;
 	color: #041543;
-/*	padding: question: should I use padding on text?*/
 	text-align: center;
 	display: block;
 	width: 30em;
@@ -99,55 +98,6 @@ li {
 	margin-right: auto; 
 }
 
-.columnleft-home {
-	max-width: 600px;
-	width: 100%;
-	float:left;
-	display: block;
-	position: relative;
-	background:url(../images/home01.jpg) no-repeat center center scroll;
-	background-size: cover;
-	height: 600px;
-}
-
-.columnright-home01{
-	max-width:300px;
-	width:100%;
-	float:right;
-	display: block;
-	position:relative;
-	background:url(../images/home03.jpg) no-repeat center center scroll;
-	background-size: cover;
-	height: 300px;
-}
-
-.columnright-home02{
-	max-width:300px;
-	width:100%;
-	float:right;
-	display: block;
-	position:relative;
-	background:url(../images/home02.jpg) no-repeat center center scroll;
-	background-size: cover;
-	height: 300px;
-}
-
-.columnright-home03 {
-	max-width:600px;
-	width:100%;
-	float: right;
-	display: block;
-	position: relative;
-	background:url(../images/home04.jpg) no-repeat center center scroll;
-	background-size: cover;
-	height: 300px;
-}
-
-.columnleft-home h1, .columnright-home01 h1, .columnright-home02 h1, .columnright-home03 h1 {
-	font-size: 2em;
-	font-color:#ba0010;
-}
-
 #site-header {
 	width: 100%; /*note: will be 100% it's specification*/
     padding: 1em; /*note: padding is inclusive of width. Use padding for items that are next to each other*/
@@ -166,6 +116,7 @@ li {
 #site-nav {
 	margin: auto;
 	float: right;
+	padding: 0.5em;
 }
 
 .nav-link {
@@ -198,6 +149,70 @@ li {
 	visibility: hidden;
 }
 
+.mast {
+	position: absolute;
+	top: 0;
+	left:0;
+	width:100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.30);
+	z-index: 8;
+}
+
+.columnleft-home {
+	width: 75%;
+	float:left;
+	display: block;
+	position: relative;
+	background:url(../images/home01.jpg) no-repeat center center scroll;
+	background-size: cover;
+	height: 0;
+	padding-bottom: 61%;
+}
+
+.columnright-home {
+	width: 25%;
+	float: right;
+}
+
+.columnsmall-home {
+	width:100%;
+	display: block;
+	position:relative;
+	background-size: cover;
+	height: 0;
+	padding-bottom: 81.4%;
+}
+
+.columnsmall-home h1, 
+.columnleft-home h1 {
+position: absolute;
+z-index: 9;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+text-align: center;
+left: 0;
+}
+
+.columnleft-home h1, .columnright-home-services h1, .columnright-home-about h1, .columnright-home-appointments h1 {
+	font-size: 2em;
+	font-color:#ba0010;
+}
+
+.columnright-home-services {
+	background:url(../images/home03.jpg) no-repeat center center scroll;
+}
+
+.columnright-home-about{
+	background:url(../images/home02.jpg) no-repeat center center scroll;
+}
+
+.columnright-home-appointments {
+	background:url(../images/home04.jpg) no-repeat center center scroll;
+}
 
 #about {
 	background:url(../images/aboutmazz01.jpg) no-repeat center center scroll;
@@ -212,15 +227,25 @@ li {
 	display: block;
 	opacity: 0.75;
 	width: 32em;
-	padding: 1.6em;
+/*	padding: 1.6em;*/
 	margin: auto;
+	transform: translateY(50%);
+	height: 50%; 
+}
+
+.vertical-article-info {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+	width: 100%;
+	left: 0%;
 }
 
 .article-block {
 	text-align: center;
 	display: block;
-	margin: 1.4em 0; /*note: margin is to space articles apart*/ /*question: should I have a margin value for left and right?*/
-    padding: 1.4em 0; 
+	margin: 1.4em 0; 
+/*    padding: 1.4em 0; */
 }
 
 .article-block img {
@@ -228,14 +253,19 @@ li {
 	display: block;
 	max-width: 1200px;
 	width: 100%;
-	margin: 0 auto 1.6em auto; /*question: why not just use the padding attribute in the article selector?*/
+	margin: 0 auto 1.6em auto; 
 }
 
-.column {
+.column-menu {
 	width: 100%;
 }
 
-.columnleft {
+#pricelist {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.columnleft-menu {
 	float: left;
 	width: 50%;
 	display: block;
@@ -243,7 +273,7 @@ li {
 	padding: 1.4em auto;
 }
 
-.columnright {
+.columnright-menu {
 	float: right;
 	display: block;
 	width: 50%;
@@ -251,14 +281,14 @@ li {
 	padding: 1.4em auto;
 }
 
-.columnleft-beardspiration {
+.columnleft-beardinspo  {
 	float: left;
 	width: 26%;
 	margin: 1.4em 0; 
     padding: 1.4em 0; 
 }
 
-.columnleft-beardspiration img {
+.columnleft-beardinspo img {
 	position: relative;
 	display: block;
 	max-width: 400px;
@@ -266,7 +296,7 @@ li {
 	margin: auto;
 }
 
-.columnright-beardspiration {
+.columnright-beardinspo {
 	float:right;
 	width: 20%;
 	margin: 1.4em 0; 
@@ -276,12 +306,12 @@ li {
 	position: relative;
 }
 
-.columnright-beardspiration p {
+.columnright-beardinspo p {
 	width: 100%;
 	padding: 10px;
 }
 
-.vertical-beardspiration {
+.vertical-beardinspo {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%); 
@@ -318,6 +348,7 @@ li {
 	float: right;
 }
 
-
+@media only screen (max-width: 920px;)
+	
 
 

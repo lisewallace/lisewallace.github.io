@@ -1,0 +1,572 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .94em; /*1em=16px*/
+	position: relative;
+}
+
+section {
+/*	question: confused about whether to use padding or margin here*/
+	text-align: center;
+	max-width: 100%;
+	width: 100%; /*is 1200px*/
+	display: block;
+	margin: 1.3em auto;
+}
+
+main {
+	max-width: 1200px;
+	width: 100%;
+	margin: auto;
+}
+
+hr {
+	width: 8em;
+	margin: 0.5em auto 1em auto;
+	height: .20em;
+	background-color: #74b7bb;
+	border: none;
+}
+
+h1, h2, h3, h4 { 
+	color: #ba0010;
+	letter-spacing: normal;
+	text-align: center;
+}
+
+h1 {
+ 	font-family: 'Montserrat', sans-serif;
+ 	font-size: 3.75em;
+ 	font-style: normal;
+ 	font-weight: 700;
+ 	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'Sorts Mill Goudy', Georgia, serif;
+  	font-size: 1.875em;
+  	font-style: italic;
+  	font-weight: 600;
+}
+
+h3 {
+	font-family: 'Sorts Mill Goudy', Georgia, serif;
+  	font-size: 1.56em;
+  	font-style: italic;
+  	font-weight: bold;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .94em;
+	line-height: 1.4em;
+	color: #041543;
+	text-align: center;
+	display: block;
+	width: 30em;
+	margin: auto; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+    line-height: 1.4em;
+    text-align: center;
+	color: #041543;
+    margin: auto;
+}
+
+#wrapper {
+	max-width: 1300px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto; 
+}
+
+#site-header {
+	width: 100%; /*note: will be 100% it's specification*/
+    padding: 1em; /*note: padding is inclusive of width. Use padding for items that are next to each other*/
+    max-width: 1200px;
+    margin: auto;
+}
+
+#logo {
+	float: left;
+	display: block;
+	width: 100%;
+	max-width: 200px;
+/*	margin: 0 auto 1.6em auto; */
+}
+
+#menuicon {
+	display: none;
+}
+
+#toggle {
+	display: none;
+}
+
+#site-nav {
+	margin: auto;
+	float: right;
+	padding: 0.5em;
+}
+
+.nav-link {
+	font-family: 'Allerta', sans-serif;
+	color:#baac88;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .125em;
+	padding: 1.25em .94em; 
+	text-decoration: none;
+	margin: 0.63em auto; 
+}
+
+.nav-link:hover {
+	color: #55868b;
+	opacity: 0.8;
+}
+
+/*.nav-link:visited {
+	color: #fff; question: using this causes the hover not to work - why?
+}*/
+
+.clearfix:after {
+	display: block;
+	content: " ";
+	clear: both;
+
+	height: 0;
+	font-size: 0;
+	visibility: hidden;
+}
+
+.mast {
+	position: absolute;
+	top: 0;
+	left:0;
+	width:100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.30);
+	z-index: 8;
+}
+
+.columnleft-home {
+	width: 75%;
+	float:left;
+	display: block;
+	position: relative;
+	background:url(../images/home01.jpg) no-repeat center center scroll;
+	background-size: cover;
+	height: 0;
+	padding-bottom: 61%;
+}
+
+.columnright-home {
+	width: 25%;
+	float: right;
+}
+
+.columnsmall-home {
+	width:100%;
+	display: block;
+	position:relative;
+	background-size: cover;
+	height: 0;
+	padding-bottom: 81.4%;
+}
+
+.columnsmall-home h1, 
+.columnleft-home h1 {
+position: absolute;
+z-index: 9;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+text-align: center;
+left: 0;
+}
+
+.columnleft-home h1, .columnright-home-services h1, .columnright-home-about h1, .columnright-home-appointments h1 {
+	font-size: 2em;
+	font-color:#ba0010;
+}
+
+.columnright-home-services {
+	background:url(../images/home03.jpg) no-repeat center center scroll;
+}
+
+.columnright-home-about{
+	background:url(../images/home02.jpg) no-repeat center center scroll;
+}
+
+.columnright-home-appointments {
+	background:url(../images/home04.jpg) no-repeat center center scroll;
+}
+
+#about {
+	background:url(../images/aboutmazz01.jpg) no-repeat center center scroll;
+	background-size: cover;
+	display: block;
+	height: 34.345em;
+	max-width: 1200px;
+	margin: 0.7em auto;,
+}
+
+.article-about{
+	background: #fff;
+	display: block;
+	opacity: 0.75;
+	width: 32em;
+	margin: auto;
+	transform: translateY(50%);
+	height: 50%; 
+}
+
+.vertical-article-info {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+	width: 100%;
+	left: 0%;
+}
+
+.article-block {
+	text-align: center;
+	display: block;
+	margin: 0.7em 0; 
+}
+
+.article-block img {
+	position: relative;
+	display: block;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto 1.6em auto; 
+}
+
+.column-menu {
+	width: 100%;
+}
+
+#pricelist {
+	max-width: 50em;
+	margin: 0 auto;
+	display:block;
+}
+
+.columnleft-menu {
+	float: left;
+	display: block;
+	width: 48%;
+	margin: 0.7em auto;
+	padding: 1.5em;
+	outline: #baac88 solid .15em;
+}
+
+.columnright-menu {
+	float: right;
+	display: block;
+	width: 48%;
+	margin: 0.7em auto;
+	padding: 1.5em;
+	outline: #baac88 solid .15em;
+}
+
+.columnleft-beardinspo  {
+	float: left;
+	width: 26%;
+	margin: 0.7em 0; 
+}
+
+.columnleft-beardinspo img {
+	position: relative;
+	display: block;
+	max-width: 400px;
+	width: 100%;
+	margin: auto;
+}
+
+.columnright-beardinspo {
+	float:right;
+	width: 20%;
+	margin: 0.7em 0; 
+	padding: 2.5em 0 2.5em 0;
+	height: 0;
+	position: relative;
+	transform: translateY(24%);
+	height: 50%; 
+	outline: #baac88 solid .15em;
+}
+
+.columnright-beardinspo p {
+	width: 100%;
+	padding: 10px;
+}
+
+#appointment {
+	background:url(../images/ubimage03.jpg) no-repeat center center scroll;
+	background-size: cover;
+	display: block;
+	height: 34.345em;
+	max-width: 1200px; 
+}
+
+.article-appointment{
+	background: #fff;
+	display: block;
+	opacity: 0.75;
+	width: 32em;
+	margin: auto;
+	transform: translateY(103%);
+	height: 32%; 
+}
+
+#site-footer {
+	width: 100%; 
+    padding: 1em; 
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-footer {
+	font-family: 'Allerta', sans-serif;
+	color: #baac88;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	font-weight: 600px;
+	letter-spacing: .125em;
+	padding: 1.25em .94em ;
+	margin: auto;
+	text-decoration: none;
+	display: block;
+	float: right;
+}
+
+@media only screen and (max-width:1180px) {
+	.columnleft-beardinspo  {
+		float: left;
+		width: 33.3%;
+		margin: 0.7em auto;
+	}
+
+	.columnright-beardinspo {
+		float: none;
+		display: block;
+		width: 32em;
+		margin: auto; 
+		padding: 10% 0 1.4em 0;
+		transform: translateY(2%);
+		height: 10%; 
+		outline: none;
+	}
+}
+
+@media only screen and (max-width:950px) {
+	#logo {
+	float: none;
+	display: block;
+	width: 40%;
+	padding: 0.5em 0 0 0;
+	margin: auto;
+	}
+
+	#site-nav {
+		margin: auto;
+		float: none;
+		padding: 1.4em 0 0 0;
+		text-align: center;
+	}
+
+	#site-header {
+	    padding: 0em;
+	}
+}
+
+@media only screen and (max-width:850px) {
+	#logo {
+	width: 50%;
+	}
+
+	h1 {
+	 	font-family: 'Montserrat', sans-serif;
+	 	font-size: 2.75em;
+	 	font-style: normal;
+	 	font-weight: 700;
+	 	text-transform: uppercase;
+	}
+
+	h2 {
+		font-family: 'Sorts Mill Goudy', Georgia, serif;
+	  	font-size: 1.4em;
+	  	font-style: italic;
+	  	font-weight: 600;
+	}
+
+	.nav-link {
+		font-size: .875em;
+	}
+
+	#about {
+		background:url(../images/aboutmazz01.jpg) no-repeat center center scroll;
+		background-size: 125%;
+		display: block;
+		height: 25em;
+	}
+
+	.article-about {
+		transform: translateY(23%);
+		height: 70%; 
+	}
+
+	#appointment {
+		background:url(../images/ubimage03.jpg) no-repeat center center scroll;
+		background-size: 125%;
+		display: block;
+		height: 25em;
+	}
+
+	.article-appointment{
+	transform: translateY(58%);
+	height: 45%; 
+	}
+
+	.columnright-beardinspo p {
+	width: 100%;
+	padding: 0;
+}
+}
+
+@media only screen and (max-width:775px) {
+	#site-nav {
+		display:none;
+	}
+
+	.nav-link {
+		display: block;
+		padding: 0.5em;
+		margin: auto;
+		font-size: .875em;
+	}
+
+	label {
+		display:block;
+		max-width: 3.2em;
+		margin: auto;
+		padding: 0.4em;
+	}
+
+	#menuicon {
+		display: block;
+	}
+
+	#toggle:checked + #site-nav {
+		display:block;
+	}
+
+	#pricelist {
+		max-width: 41em;
+		margin: 0 auto;
+		display:block;
+	}
+
+	#site-footer {
+		margin: auto;
+		float: none;
+		text-align: center;
+	}
+
+	.nav-footer {
+		float: none;
+		padding: 0.4em;
+		margin: auto;
+}
+}
+
+@media only screen and (max-width:713px) {
+	#pricelist {
+		max-width: 41em;
+		margin: 0 auto;
+		display:block;
+	}
+
+	.columnleft-menu {
+		float: none;
+		display: block;
+		width: 17em;
+		margin: auto;
+		padding:0;
+		outline: none;
+		text-align: center;
+	}
+
+	.columnright-menu {
+		float: none;
+		display: block;
+		width: 9em;
+		margin: auto;
+		padding: 0;
+		outline: none;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width:320px) and (max-width:610px) {
+	#about {
+		background-size: 85%;
+		height: 12em;
+		margin: 0 0 23em 0;
+	}
+
+	.article-about {
+		transform: translateY(220%);
+		opacity: 100;
+		width: 22em;
+		padding: 0 0 8.6em
+		margin: 0 auto 6.6em 0;
+	}
+	
+	p {
+		width: 20em;
+	}
+
+	.article-block img {
+		width: 85%;
+	}
+
+	#beards {
+		display:none;
+	}
+
+	#appointment {
+		background-size: 85%;
+		height: 12em;
+		margin: 0 0 10em 0;
+	}
+
+	.article-appointment{
+	transform: translateY(260%);
+	opacity: 100;
+	width: 22em;
+	padding: 0 0 8.6em
+	margin: 0 auto 6.6em 0;
+	}
+}
+	
